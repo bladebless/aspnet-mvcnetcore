@@ -1,0 +1,22 @@
+﻿@* Страница макета для всех дочерних контентов.*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/colors/string">Цвета в строке</a></li>
+        <li><a href="/colors/list">Цвета в списке</a></li>
+        <li><a href="/colors/table">Цвета в таблице</a></li>
+        <li><a href="/colors/file">Цвета в текстовом файле</a></li>
+    </ul>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

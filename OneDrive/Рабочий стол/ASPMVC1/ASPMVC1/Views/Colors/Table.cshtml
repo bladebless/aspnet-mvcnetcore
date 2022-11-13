@@ -1,0 +1,21 @@
+﻿@* Устанавливаем тип модели *@
+@model ASPMVC.Models.Colors
+
+@{
+    ViewBag.Title = "Цвета в таблице";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>Цвета в таблице</h2>
+
+
+@* После того как тип модели установили, обращаемся
+    к объекту модели по имени Model *@
+<table style="border:solid 2px blue;">
+    @for (int i = 0; i < Model.List.Length; i++)
+    {
+        <tr>
+            <td style="border:solid 1px blue;">@Model.List[i]</td>
+        </tr>
+    }
+</table>

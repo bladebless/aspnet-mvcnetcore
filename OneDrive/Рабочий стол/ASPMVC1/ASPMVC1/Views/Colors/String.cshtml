@@ -1,0 +1,16 @@
+﻿@model ASPMVC.Models.Colors
+
+@{
+    ViewBag.Title = "Цвета в строке";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>Цвета в строке</h2>
+
+
+@* После того как тип модели установили, обращаемся
+    к объекту модели по имени Model *@
+@for (int i = 0; i < Model.List.Length; i++)
+{
+    @Html.Raw(Model.List[i] + ", ")
+}
